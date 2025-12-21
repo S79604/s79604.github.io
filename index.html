@@ -118,6 +118,45 @@
             grid-column: span 2;
             grid-row: span 1;
         }
+
+        /* Layout for the Case Study Content Split */
+        .case-study-split {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            height: 100%;
+        }
+
+        .case-study-text {
+            flex: 1;
+        }
+
+        .case-study-action {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Lab Timer Button Styling */
+        .btn-lab-timer {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 74, 119, 0.2);
+            text-align: center;
+        }
+
+        .btn-lab-timer:hover {
+            background-color: #003657;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 74, 119, 0.3);
+        }
         
         /* Card 5 (Hobby/Activity): Small box (1x1) */
         #card-hobby {
@@ -197,6 +236,16 @@
                 padding: 20px;
             }
 
+            .case-study-split {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn-lab-timer {
+                width: 100%;
+                margin-top: 10px;
+            }
+
             .profile-header h1 {
                 font-size: 2rem;
             }
@@ -252,8 +301,15 @@
         <div class="bento-card" id="card-case-study">
             <p class="card-title">Recent Case Study</p>
             <div class="card-content">
-                <p style="font-weight: 600; color: var(--color-accent);">Title: Starch Gelatinization in Local Kuih</p>
-                <p style="color: var(--color-subtle-text); font-size: 0.95rem;">Analyzing texture profiles of traditional 'Kuih Lapis' samples to understand the impact of varying starch content and cooking methods.</p>
+                <div class="case-study-split">
+                    <div class="case-study-text">
+                        <p style="font-weight: 600; color: var(--color-accent);">Title: Starch Gelatinization in Local Kuih</p>
+                        <p style="color: var(--color-subtle-text); font-size: 0.95rem;">Analyzing texture profiles of traditional 'Kuih Lapis' samples to understand the impact of varying starch content and cooking methods.</p>
+                    </div>
+                    <div class="case-study-action">
+                        <a href="https://s79604.github.io/lab-timer-app2/" class="btn-lab-timer" target="_blank">Try My Lab Timer App</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -267,7 +323,8 @@
         <div class="bento-card" id="card-playlist">
             <p class="card-title">Study & Focus Playlist</p>
             <div class="card-content">
-                <p>🎧 Placeholder for Embedded Music Player / Spotify Widget<<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3QaPy1KgI7nu9FJEQUgn6h?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>>
+                <p>🎧 Placeholder for Embedded Music Player / Spotify Widget</p>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3QaPy1KgI7nu9FJEQUgn6h?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 <p style="font-size: 0.9rem; margin-top: 5px;">*Currently listening to Lo-fi beats for maximum focus.*</p>
             </div>
         </div>
